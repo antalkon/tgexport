@@ -1,0 +1,7 @@
+2026-10-01 09:00:00 Bob: Morning!
+2026-10-01 09:01:30 Alice: Hi Bob
+    how are you?
+2026-10-01 09:02:00 Bob: [sticker 👍]
+2026-10-02 18:30:00 Alice: [photo] look at this
+2026-10-02 18:35:00 Bob: [voice message 1:15]
+2026-10-03 23:59:59 user3003: ghost

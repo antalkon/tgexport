@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - name: Test
+        run: go test -count=1 ./...
+      - uses: goreleaser/goreleaser-action@v6
+        with:
+          version: "~> v2"
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  smoke-test:
+    name: install script (${{ matrix.os }})
+    needs: goreleaser
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install, re-run (update no-op), uninstall (unix)
+        if: runner.os != 'Windows'
+        shell: bash
+        run: |
+          sh scripts/install.sh --version "$GITHUB_REF_NAME" --dir "$HOME/tgx-bin" --no-modify-path
+          "$HOME/tgx-bin/tgexport" version
+          PATH="$HOME/tgx-bin:$PATH" sh scripts/install.sh --version "$GITHUB_REF_NAME" | grep -q "already installed"
+          "$HOME/tgx-bin/tgexport" testdata/personal.json -o - | head -n 3
+          PATH="$HOME/tgx-bin:$PATH" sh scripts/uninstall.sh
+          test ! -e "$HOME/tgx-bin/tgexport"
+      - name: Install, re-run (update no-op), uninstall (windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          ./scripts/install.ps1 -Version $env:GITHUB_REF_NAME
+          $exe = Join-Path $env:LOCALAPPDATA 'Programs\tgexport\tgexport.exe'
+          & $exe version
+          $out = ./scripts/install.ps1 -Version $env:GITHUB_REF_NAME 6>&1 | Out-String
+          if ($out -notmatch 'already installed') { throw "re-run did not detect installed version: $out" }
+          & $exe testdata/personal.json -o - | Select-Object -First 3
+          ./scripts/uninstall.ps1
+          if (Test-Path $exe) { throw 'uninstall left the binary behind' }

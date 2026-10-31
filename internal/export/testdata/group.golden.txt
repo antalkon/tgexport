@@ -1,0 +1,8 @@
+2026-09-21 11:05:48 Carol: * added Dave, Deleted Account
+2026-09-21 11:06:00 Dave: See docs (https://example.com/docs) and run: make <test> evil (javascript:alert(1))
+2026-09-21 11:07:00 Carol: [forwarded from News Channel] go test ./...
+2026-09-21 11:08:00 Carol: Plan
+    Ship v1
+    a | b
+2026-09-22 10:00:00 Dave: [poll Lunch?]
+2026-09-22 10:05:00 Dave: * pinned a message

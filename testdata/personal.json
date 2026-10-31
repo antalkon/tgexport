@@ -1,0 +1,14 @@
+{
+ "name": "Alice",
+ "type": "personal_chat",
+ "id": 1001,
+ "messages": [
+  {"id": 1, "type": "message", "date": "2026-10-01T09:00:00", "date_unixtime": "1790834400", "from": "Bob", "from_id": "user2002", "text": "Morning!", "text_entities": [{"type": "plain", "text": "Morning!"}]},
+  {"id": 2, "type": "message", "date": "2026-10-01T09:01:30", "date_unixtime": "1790834490", "from": "Alice", "from_id": "user1001", "reply_to_message_id": 1, "text": "Hi Bob\nhow are you?", "text_entities": [{"type": "plain", "text": "Hi Bob\nhow are you?"}],
+   "reactions": [{"type": "emoji", "count": 1, "emoji": "❤", "recent": []}]},
+  {"id": 3, "type": "message", "date": "2026-10-01T09:02:00", "date_unixtime": "1790834520", "from": "Bob", "from_id": "user2002", "file": "(File not included.)", "file_name": "sticker.webp", "media_type": "sticker", "sticker_emoji": "👍", "text": "", "text_entities": []},
+  {"id": 4, "type": "message", "date": "2026-10-02T18:30:00", "date_unixtime": "1790955000", "edited": "2026-10-02T18:31:00", "from": "Alice", "from_id": "user1001", "photo": "photos/photo_1.jpg", "text": "look at this", "text_entities": [{"type": "plain", "text": "look at this"}]},
+  {"id": 5, "type": "message", "date": "2026-10-02T18:35:00", "date_unixtime": "1790955300", "from": "Bob", "from_id": "user2002", "file": "(File not included.)", "media_type": "voice_message", "mime_type": "audio/ogg", "duration_seconds": 75, "text": "", "text_entities": []},
+  {"id": 6, "type": "message", "date": "2026-10-03T23:59:59", "date_unixtime": "1791061199", "from": null, "from_id": "user3003", "text": "ghost", "text_entities": [{"type": "plain", "text": "ghost"}]}
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "name": "Project: team / chat",
+ "type": "private_group",
+ "id": 5005,
+ "messages": [
+  {"id": 10, "type": "service", "date": "2026-09-21T11:05:48", "date_unixtime": "1789970748", "actor": "Carol", "actor_id": "user4004", "action": "invite_members", "members": ["Dave", null], "text": "", "text_entities": []},
+  {"id": 11, "type": "message", "date": "2026-09-21T11:06:00", "date_unixtime": "1789970760", "from": "Dave", "from_id": "user5005",
+   "text": ["See ", {"type": "text_link", "text": "docs", "href": "https://example.com/docs"}, " and ", {"type": "bold", "text": "run"}, ": ", {"type": "code", "text": "make <test>"}, " ", {"type": "text_link", "text": "evil", "href": "javascript:alert(1)"}],
+   "text_entities": []},
+  {"id": 12, "type": "message", "date": "2026-09-21T11:07:00", "date_unixtime": "1789970820", "from": "Carol", "from_id": "user4004", "forwarded_from": "News Channel", "text": [{"type": "pre", "text": "go test ./...", "language": "shell"}], "text_entities": []},
+  {"id": 13, "type": "message", "date": "2026-09-21T11:08:00", "date_unixtime": "1789970880", "from": "Carol", "from_id": "user4004",
+   "rich_message": {"blocks": [{"type": "heading", "text": {"type": "plain", "text": "Plan"}}, {"type": "paragraph", "text": {"type": "concat", "text": [{"type": "plain", "text": "Ship "}, {"type": "bold", "text": {"type": "plain", "text": "v1"}}]}}, {"type": "table", "rows": [{"cells": [{"text": {"type": "plain", "text": "a"}}, {"text": {"type": "plain", "text": "b"}}]}]}]}},
+  {"id": 14, "type": "message", "date": "2026-09-22T10:00:00", "date_unixtime": "1790060400", "from": "Dave", "from_id": "user5005", "poll": {"question": "Lunch?", "closed": false, "answers": [{"text": "Yes", "voters": 2}]}, "text": "", "text_entities": []},
+  {"id": 15, "type": "service", "date": "2026-09-22T10:05:00", "date_unixtime": "1790060700", "actor": "Dave", "actor_id": "user5005", "action": "pin_message", "message_id": 14, "text": "", "text_entities": []}
+ ]
+}

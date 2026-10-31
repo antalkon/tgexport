@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+version: 2
+project_name: tgexport
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: tgexport
+    main: ./cmd/tgexport
+    binary: tgexport
+    env:
+      - CGO_ENABLED=0
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{.Version}} -X main.commit={{.ShortCommit}} -X main.date={{.Date}}
+
+archives:
+  # Version-less names give stable "releases/latest/download/<name>" URLs
+  # that the install scripts rely on.
+  - name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    files:
+      - README.md
+      - README.ru.md
+      - LICENSE
+      - CHANGELOG.md
+
+checksum:
+  name_template: checksums.txt
+  algorithm: sha256
+
+changelog:
+  use: github
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - "^ci:"
+
+release:
+  footer: |
+    ## Install / update
+
+    **macOS / Linux**
+    ```sh
+    curl -fsSL https://raw.githubusercontent.com/antalkon/tgexport/main/scripts/install.sh | sh
+    ```
+
+    **Windows (PowerShell)**
+    ```powershell
+    irm https://raw.githubusercontent.com/antalkon/tgexport/main/scripts/install.ps1 | iex
+    ```
+
+    **Go**
+    ```sh
+    go install github.com/antalkon/tgexport/cmd/tgexport@{{ .Tag }}
+    ```

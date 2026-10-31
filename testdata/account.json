@@ -1,0 +1,298 @@
+{
+ "about": "full export",
+ "chats": {
+  "about": "x",
+  "list": [
+   {
+    "name": "Alice",
+    "type": "personal_chat",
+    "id": 1001,
+    "messages": [
+     {
+      "id": 1,
+      "type": "message",
+      "date": "2026-10-01T09:00:00",
+      "date_unixtime": "1790834400",
+      "from": "Bob",
+      "from_id": "user2002",
+      "text": "Morning!",
+      "text_entities": [
+       {
+        "type": "plain",
+        "text": "Morning!"
+       }
+      ]
+     },
+     {
+      "id": 2,
+      "type": "message",
+      "date": "2026-10-01T09:01:30",
+      "date_unixtime": "1790834490",
+      "from": "Alice",
+      "from_id": "user1001",
+      "reply_to_message_id": 1,
+      "text": "Hi Bob\nhow are you?",
+      "text_entities": [
+       {
+        "type": "plain",
+        "text": "Hi Bob\nhow are you?"
+       }
+      ],
+      "reactions": [
+       {
+        "type": "emoji",
+        "count": 1,
+        "emoji": "❤",
+        "recent": []
+       }
+      ]
+     },
+     {
+      "id": 3,
+      "type": "message",
+      "date": "2026-10-01T09:02:00",
+      "date_unixtime": "1790834520",
+      "from": "Bob",
+      "from_id": "user2002",
+      "file": "(File not included.)",
+      "file_name": "sticker.webp",
+      "media_type": "sticker",
+      "sticker_emoji": "👍",
+      "text": "",
+      "text_entities": []
+     },
+     {
+      "id": 4,
+      "type": "message",
+      "date": "2026-10-02T18:30:00",
+      "date_unixtime": "1790955000",
+      "edited": "2026-10-02T18:31:00",
+      "from": "Alice",
+      "from_id": "user1001",
+      "photo": "photos/photo_1.jpg",
+      "text": "look at this",
+      "text_entities": [
+       {
+        "type": "plain",
+        "text": "look at this"
+       }
+      ]
+     },
+     {
+      "id": 5,
+      "type": "message",
+      "date": "2026-10-02T18:35:00",
+      "date_unixtime": "1790955300",
+      "from": "Bob",
+      "from_id": "user2002",
+      "file": "(File not included.)",
+      "media_type": "voice_message",
+      "mime_type": "audio/ogg",
+      "duration_seconds": 75,
+      "text": "",
+      "text_entities": []
+     },
+     {
+      "id": 6,
+      "type": "message",
+      "date": "2026-10-03T23:59:59",
+      "date_unixtime": "1791061199",
+      "from": null,
+      "from_id": "user3003",
+      "text": "ghost",
+      "text_entities": [
+       {
+        "type": "plain",
+        "text": "ghost"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Project: team / chat",
+    "type": "private_group",
+    "id": 5005,
+    "messages": [
+     {
+      "id": 10,
+      "type": "service",
+      "date": "2026-09-21T11:05:48",
+      "date_unixtime": "1789970748",
+      "actor": "Carol",
+      "actor_id": "user4004",
+      "action": "invite_members",
+      "members": [
+       "Dave",
+       null
+      ],
+      "text": "",
+      "text_entities": []
+     },
+     {
+      "id": 11,
+      "type": "message",
+      "date": "2026-09-21T11:06:00",
+      "date_unixtime": "1789970760",
+      "from": "Dave",
+      "from_id": "user5005",
+      "text": [
+       "See ",
+       {
+        "type": "text_link",
+        "text": "docs",
+        "href": "https://example.com/docs"
+       },
+       " and ",
+       {
+        "type": "bold",
+        "text": "run"
+       },
+       ": ",
+       {
+        "type": "code",
+        "text": "make <test>"
+       },
+       " ",
+       {
+        "type": "text_link",
+        "text": "evil",
+        "href": "javascript:alert(1)"
+       }
+      ],
+      "text_entities": []
+     },
+     {
+      "id": 12,
+      "type": "message",
+      "date": "2026-09-21T11:07:00",
+      "date_unixtime": "1789970820",
+      "from": "Carol",
+      "from_id": "user4004",
+      "forwarded_from": "News Channel",
+      "text": [
+       {
+        "type": "pre",
+        "text": "go test ./...",
+        "language": "shell"
+       }
+      ],
+      "text_entities": []
+     },
+     {
+      "id": 13,
+      "type": "message",
+      "date": "2026-09-21T11:08:00",
+      "date_unixtime": "1789970880",
+      "from": "Carol",
+      "from_id": "user4004",
+      "rich_message": {
+       "blocks": [
+        {
+         "type": "heading",
+         "text": {
+          "type": "plain",
+          "text": "Plan"
+         }
+        },
+        {
+         "type": "paragraph",
+         "text": {
+          "type": "concat",
+          "text": [
+           {
+            "type": "plain",
+            "text": "Ship "
+           },
+           {
+            "type": "bold",
+            "text": {
+             "type": "plain",
+             "text": "v1"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "table",
+         "rows": [
+          {
+           "cells": [
+            {
+             "text": {
+              "type": "plain",
+              "text": "a"
+             }
+            },
+            {
+             "text": {
+              "type": "plain",
+              "text": "b"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "id": 14,
+      "type": "message",
+      "date": "2026-09-22T10:00:00",
+      "date_unixtime": "1790060400",
+      "from": "Dave",
+      "from_id": "user5005",
+      "poll": {
+       "question": "Lunch?",
+       "closed": false,
+       "answers": [
+        {
+         "text": "Yes",
+         "voters": 2
+        }
+       ]
+      },
+      "text": "",
+      "text_entities": []
+     },
+     {
+      "id": 15,
+      "type": "service",
+      "date": "2026-09-22T10:05:00",
+      "date_unixtime": "1790060700",
+      "actor": "Dave",
+      "actor_id": "user5005",
+      "action": "pin_message",
+      "message_id": 14,
+      "text": "",
+      "text_entities": []
+     }
+    ]
+   }
+  ]
+ },
+ "left_chats": {
+  "about": "y",
+  "list": [
+   {
+    "name": "Alice",
+    "type": "private_supergroup",
+    "id": 7007,
+    "messages": [
+     {
+      "id": 1,
+      "type": "message",
+      "date": "2026-01-01T00:00:00",
+      "from": "Eve",
+      "from_id": "user7",
+      "text": "bye",
+      "text_entities": []
+     }
+    ]
+   }
+  ]
+ }
+}

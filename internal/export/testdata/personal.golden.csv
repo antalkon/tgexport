@@ -1,0 +1,8 @@
+id,date,time,from,from_id,type,reply_to,forwarded_from,media,text,reactions
+1,2026-10-01,09:00:00,Bob,user2002,message,,,,Morning!,
+2,2026-10-01,09:01:30,Alice,user1001,message,1,,,"Hi Bob
+how are you?",❤ 1
+3,2026-10-01,09:02:00,Bob,user2002,message,,,[sticker 👍],,
+4,2026-10-02,18:30:00,Alice,user1001,message,,,[photo],look at this,
+5,2026-10-02,18:35:00,Bob,user2002,message,,,[voice message 1:15],,
+6,2026-10-03,23:59:59,user3003,user3003,message,,,,ghost,

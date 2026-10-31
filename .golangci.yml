@@ -1,0 +1,28 @@
+version: "2"
+
+linters:
+  enable:
+    - errorlint
+    - misspell
+    - unconvert
+    - unparam
+    - revive
+  settings:
+    errcheck:
+      exclude-functions:
+        - fmt.Fprintf
+        - fmt.Fprintln
+        - fmt.Fprint
+        - (*bufio.Writer).WriteString
+        - (*text/tabwriter.Writer).Flush
+        - (hash.Hash).Write
+        - (*os.File).Close
+        - os.Remove
+  exclusions:
+    presets:
+      - std-error-handling
+
+formatters:
+  enable:
+    - gofmt
+    - goimports

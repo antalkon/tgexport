@@ -1,0 +1,54 @@
+{
+  "id": 5005,
+  "name": "Project: team / chat",
+  "type": "private_group",
+  "count": 6,
+  "messages": [
+    {
+      "id": 10,
+      "date": "2026-09-21T11:05:48",
+      "from": "Carol",
+      "from_id": "user4004",
+      "service": true,
+      "text": "added Dave, Deleted Account"
+    },
+    {
+      "id": 11,
+      "date": "2026-09-21T11:06:00",
+      "from": "Dave",
+      "from_id": "user5005",
+      "text": "See docs (https://example.com/docs) and run: make <test> evil (javascript:alert(1))"
+    },
+    {
+      "id": 12,
+      "date": "2026-09-21T11:07:00",
+      "from": "Carol",
+      "from_id": "user4004",
+      "forwarded_from": "News Channel",
+      "text": "go test ./..."
+    },
+    {
+      "id": 13,
+      "date": "2026-09-21T11:08:00",
+      "from": "Carol",
+      "from_id": "user4004",
+      "text": "Plan\nShip v1\na | b"
+    },
+    {
+      "id": 14,
+      "date": "2026-09-22T10:00:00",
+      "from": "Dave",
+      "from_id": "user5005",
+      "media": "[poll Lunch?]",
+      "text": ""
+    },
+    {
+      "id": 15,
+      "date": "2026-09-22T10:05:00",
+      "from": "Dave",
+      "from_id": "user5005",
+      "service": true,
+      "text": "pinned a message"
+    }
+  ]
+}

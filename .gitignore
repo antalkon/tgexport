@@ -1,0 +1,11 @@
+/bin/
+/dist/
+coverage.out
+*.test
+.DS_Store
+.idea/
+.vscode/
+
+# never commit real chat exports
+result.json
+ChatExport_*/
